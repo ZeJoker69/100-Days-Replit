@@ -1,0 +1,53 @@
+
+from getpass import getpass as input
+print("""\033[31m
+WELCOME ALL CHALLENGERS TO THE GREATEST R.P.S GAME
+\033[0m""")
+print("")
+print("Select your moves [R, P, S]")
+R = ("R")
+P = ("P")
+S = ("S")
+P1 = 0
+P2 = 0
+while P2 < 3 and P1 < 3:
+  player1 = input("Player 1, Your Move: ")
+  player2 = input("Player 2, Your Turn: ")
+  if player1 == R and player2 == P:
+    P2 += 1
+    print("Player 2 wins this round")
+    continue
+  if player1 == R and player2 == S:
+    P1 += 1
+    print("Player 1 Wins")
+    continue
+  if player1 == R and player2 == R:
+    print("We have a Tie")
+    continue
+  if player1 == P and player2 == R:
+    P1 += 1
+    print("Player 1 Wins this battle")
+    continue
+  if player1 == P and player2 == P:
+    print ("A Tie, we must not come to again")
+    continue
+  if player1 == P and player2 == S:
+    P2 += 1
+    print("Ah yes, Player 1 loses to a Sciccors")
+    continue
+  if player1 == S and player2 == R:
+    P2 += 1
+    print("Player 1 seems to have lost to Rock")
+    continue
+  if player1 == S and player2 == P:
+    P1 += 1
+    print("Yup thats the stuff, Victory for Player 1")
+    continue
+  if player1 == S and player2 == S:
+    print("Pussies with a double S")
+    continue
+if P1 == 3:
+  print ("Player 1 won",P1,"times")
+if P2 == 3:
+  print ("Player 2 won",P2,"times")
+  print("Game Over")
