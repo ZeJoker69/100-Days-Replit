@@ -1,0 +1,28 @@
+#Number guessing game
+exit = ""
+a = 69
+b = 0
+while  exit != "yes":
+  x = int(input("What is the best number from 1 - 100?: "))
+  if 0<= x <= 30:
+    b += 1
+    print("Not bad, but very far")
+  if 31 <= x <= 50:
+    b += 1
+    print("Oya na, lets try that again",x,"isn't far")
+  if 51 <= x <= 68:
+    b += 1
+    print("Fvck, almost there",x,"is not that much far na")
+  if 70 <= x <= 80:
+    b += 1
+    print("Oya na, you are definetely far")
+  if 81 <= x <= 100:
+    b += 1
+    print("HaHaHa, Far, like Otilo",x,"no b am na")
+  if x == a:
+    print("Correct")
+    break
+  else:
+    print("Again")
+  exit 
+exit = input("Exit?: ")
