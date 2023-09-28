@@ -1,0 +1,37 @@
+import random
+import math
+
+print("""\033[36m
+  Welcome to the Ultimate Math Game in The World
+\033[0m""")
+
+GN = int(input("\033[32m How many numbers do you want to solve? \033[0m", ))
+
+random.seed()
+count = 0
+c = 0
+w = 0
+
+while GN > 0:
+  num1 = random.randint(1, 10)
+  num2 = random.randint(1, 10)
+  print("\033[35m what is ", num1, "x", num2, "=\033[0m")
+  guess = int(input())
+  answer = (num1 * num2)
+
+  if guess == answer:
+    print("\033[34m correct! \033[0m")
+    c += 1
+
+  if guess != answer:
+    print("\033[31m Sorry, the number is \033[0m", answer, ".")
+    w += 1
+  T = c + w
+  if T == GN:
+    break
+print("\033[34m'You got ",c,"answers correct \033[0m")
+print("\033[31m'You got",w,"answers wrong \033[0m")
+if GN > 1:
+
+    result =(c / T)* 100
+    print("\033[33m,'You got ", round(result,2), "% of the problem.\033[0m")
